@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6758e276-4c7c-4595-a0bc-a7680029de43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/in/jdbc/main/NewJDBCConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/in/jdbc/main/JDBCConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/in/jdbc/main/JDBCConnection.java" afterDir="false" />
-    </list>
+    <list default="true" id="6758e276-4c7c-4595-a0bc-a7680029de43" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +111,7 @@
       <workItem from="1689752744433" duration="1679000" />
       <workItem from="1689754621604" duration="859000" />
       <workItem from="1689755498503" duration="333000" />
-      <workItem from="1689756095379" duration="2233000" />
+      <workItem from="1689756095379" duration="2521000" />
     </task>
     <servers />
   </component>
