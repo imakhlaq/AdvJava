@@ -34,7 +34,7 @@ public class JDBCConnection {
 //                "23),(2,'kaif',24),(3,'Sabir',22),(4,'Arish',23)";
 
         //5 using statement to get data
-        
+
         //executing creation table
         // int resultSet = statement.executeUpdate(query);
 
