@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6758e276-4c7c-4595-a0bc-a7680029de43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/in/jdbc/main/PreCompiledQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/in/jdbc/main/WorkingWithDate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/in/jdbc/fileoperation/FileOperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/in/jdbc/main/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/in/jdbc/main/WorkingWithDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/in/jdbc/main/WorkingWithDate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,13 +69,26 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.WorkingWithDate">
-    <configuration name="JDBCConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="in.jdbc.main.JDBCConnection" />
+  <component name="RunManager" selected="Application.FileOperation">
+    <configuration name="Date" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="in.jdbc.main.Date" />
       <module name="JDBCApp" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="in.jdbc.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileOperation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="in.jdbc.fileoperation.FileOperation" />
+      <module name="JDBCApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="in.jdbc.fileoperation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -123,10 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FileOperation" />
         <item itemvalue="Application.WorkingWithDate" />
+        <item itemvalue="Application.Date" />
         <item itemvalue="Application.PreCompiledQuery" />
         <item itemvalue="Application.NewJDBCConnection" />
-        <item itemvalue="Application.JDBCConnection" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +161,12 @@
       <workItem from="1689756095379" duration="3915000" />
       <workItem from="1689774090892" duration="21000" />
       <workItem from="1689774118360" duration="107000" />
-      <workItem from="1689774231957" duration="8636000" />
+      <workItem from="1689774231957" duration="9880000" />
+      <workItem from="1689825139484" duration="671000" />
+      <workItem from="1689825974890" duration="302000" />
+      <workItem from="1689826411636" duration="2696000" />
+      <workItem from="1689839772662" duration="5414000" />
+      <workItem from="1689858467000" duration="1051000" />
     </task>
     <servers />
   </component>

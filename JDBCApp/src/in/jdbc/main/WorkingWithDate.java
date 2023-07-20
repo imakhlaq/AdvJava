@@ -2,11 +2,11 @@ package in.jdbc.main;
 
 import java.sql.*;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.Date;
 import java.util.Scanner;
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -54,20 +54,22 @@ public class WorkingWithDate {
 
             preparedStatement = connection.prepareStatement(createUser);
 
-            //date
-            Date dateof = new SimpleDateFormat("dd-MM-yyyy").parse(DOB);
+            //date object and parsing it using special pattern
+            LocalDate DOBdate = LocalDate.parse(DOB,
+                    DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+
 
             preparedStatement.setString(1, name);
-            preparedStatement.setDate(2, new java.sql.Date(dateof.getTime()));
-            preparedStatement.setDate(3,
-                    new java.sql.Date(new Date().getTime()));
+            preparedStatement.setDate(2, new Date(Date.valueOf(DOBdate).getTime()));
+            preparedStatement.setTimestamp(3,
+                    new Timestamp(Timestamp.valueOf(LocalDateTime.now()).getTime()));
             preparedStatement.executeUpdate();
 
 
             //reading user data
             Integer id = scanner.nextInt();
 
-            String getQuery = "SELECT name,DOB FROM users_info WHERE id= ?";
+            String getQuery = "SELECT name,DOB,join_date FROM users_info WHERE id= ?";
 
             preparedStatement = connection.prepareStatement(getQuery);
 
@@ -77,10 +79,11 @@ public class WorkingWithDate {
 
             while (resultSet.next()) {
                 String nameOut = resultSet.getString(1);
+                LocalDate DOBOut = resultSet.getDate(2).toLocalDate();
 
-                Date DOBOut = resultSet.getDate(2);
+                Timestamp join = resultSet.getTimestamp(3);
 
-                System.out.println(nameOut + " " + DOBOut);
+                System.out.println(nameOut + " " + DOBOut + " " + join);
 
             }
 
@@ -88,8 +91,6 @@ public class WorkingWithDate {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
 
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
         } finally {
             assert scanner != null;
             scanner.close();
