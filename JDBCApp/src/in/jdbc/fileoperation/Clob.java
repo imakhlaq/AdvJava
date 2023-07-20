@@ -56,7 +56,7 @@ public class Clob {
                 System.out.println(resultSet.getString(1));
 
                 Reader rd = resultSet.getCharacterStream(2);
-                
+
                 rd.transferTo(pw);
 
                 pw.flush();
