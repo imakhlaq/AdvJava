@@ -12,7 +12,7 @@
         <introspection-scope>
           <node kind="database">
             <name qname="java" />
-            <name qname="postgres" />
+            <name qname="pointXero" />
             <node kind="schema" qname="public" />
           </node>
         </introspection-scope>

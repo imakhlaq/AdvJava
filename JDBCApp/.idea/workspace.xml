@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6758e276-4c7c-4595-a0bc-a7680029de43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/in/jdbc/connectionpool/ConnectionPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/in/jdbc/fileoperation/Clob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/in/jdbc/fileoperation/Clob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/in/jdbc/transaction/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jdbc.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.Clob">
+  <component name="RunManager" selected="Application.Transaction">
     <configuration name="Clob" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="in.jdbc.fileoperation.Clob" />
       <module name="JDBCApp" />
@@ -108,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PreCompiledQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="in.jdbc.main.PreCompiledQuery" />
+    <configuration name="Transaction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="in.jdbc.transaction.Transaction" />
       <module name="JDBCApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="in.jdbc.main.*" />
+          <option name="PATTERN" value="in.jdbc.transaction.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Transaction" />
         <item itemvalue="Application.Clob" />
         <item itemvalue="Application.FileOperation" />
         <item itemvalue="Application.WorkingWithDate" />
         <item itemvalue="Application.Date" />
-        <item itemvalue="Application.PreCompiledQuery" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +165,8 @@
       <workItem from="1689825974890" duration="302000" />
       <workItem from="1689826411636" duration="2696000" />
       <workItem from="1689839772662" duration="5414000" />
-      <workItem from="1689858467000" duration="8909000" />
+      <workItem from="1689858467000" duration="11300000" />
+      <workItem from="1689906890632" duration="1092000" />
     </task>
     <servers />
   </component>
