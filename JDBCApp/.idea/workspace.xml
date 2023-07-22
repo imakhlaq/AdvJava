@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6758e276-4c7c-4595-a0bc-a7680029de43" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/in/jdbc/transaction/Transaction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/in/jdbc/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/in/jdbc/transaction/Transaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +165,8 @@
       <workItem from="1689826411636" duration="2696000" />
       <workItem from="1689839772662" duration="5414000" />
       <workItem from="1689858467000" duration="11300000" />
-      <workItem from="1689906890632" duration="1092000" />
+      <workItem from="1689906890632" duration="3889000" />
+      <workItem from="1689927335955" duration="1450000" />
     </task>
     <servers />
   </component>

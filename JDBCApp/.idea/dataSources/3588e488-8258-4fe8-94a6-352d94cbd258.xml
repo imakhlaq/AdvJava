@@ -3,9 +3,17 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>772</IntrospectionStateNumber>
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G</Grants>
+      <IntrospectionStateNumber>775</IntrospectionStateNumber>
       <ServerVersion>15.3</ServerVersion>
-      <StartupTime>1689858371</StartupTime>
+      <StartupTime>1689906716</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -815,7 +823,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>767</IntrospectionStateNumber>
+      <IntrospectionStateNumber>775</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -829,7 +837,6 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>772</IntrospectionStateNumber>
       <ObjectId>16424</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4242,7 +4249,7 @@ false Zulu
     <schema id="263" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>767</IntrospectionStateNumber>
+      <IntrospectionStateNumber>775</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -7598,12 +7605,19 @@ false Zulu
     <schema id="507" parent="4" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>772</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="508" parent="263" name="users_info_id_seq">
+    <sequence id="508" parent="263" name="bank_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16425</ObjectId>
+      <SequenceIdentity>1(1)</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>774</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="509" parent="263" name="users_info_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16402</ObjectId>
       <SequenceIdentity>1(5)</SequenceIdentity>
@@ -7611,73 +7625,116 @@ false Zulu
       <StateNumber>749</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="509" parent="263" name="cities">
+    <table id="510" parent="263" name="bank">
+      <ObjectId>16426</ObjectId>
+      <StateNumber>774</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <table id="511" parent="263" name="cities">
       <ObjectId>16419</ObjectId>
       <StateNumber>766</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="510" parent="263" name="photos">
+    <table id="512" parent="263" name="photos">
       <ObjectId>16413</ObjectId>
       <StateNumber>760</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="511" parent="263" name="userid">
+    <table id="513" parent="263" name="userid">
       <ObjectId>16399</ObjectId>
       <StateNumber>742</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="512" parent="263" name="users_info">
+    <table id="514" parent="263" name="users_info">
       <ObjectId>16403</ObjectId>
       <StateNumber>755</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="513" parent="509" name="name">
+    <column id="515" parent="510" name="id">
+      <DasType>integer|0s</DasType>
+      <DefaultExpression>nextval(&apos;bank_id_seq&apos;::regclass)</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>774</StateNumber>
+      <SequenceId>16425</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="516" parent="510" name="name">
+      <DasType>varchar(30)|0s</DasType>
+      <Position>2</Position>
+      <StateNumber>774</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="517" parent="510" name="money">
+      <DasType>integer|0s</DasType>
+      <Position>3</Position>
+      <StateNumber>774</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="518" parent="510" name="bank_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16430</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>774</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="519" parent="510" name="bank_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16431</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>774</StateNumber>
+      <UnderlyingIndexId>16430</UnderlyingIndexId>
+    </key>
+    <column id="520" parent="511" name="name">
       <DasType>varchar(20)|0s</DasType>
       <Position>1</Position>
       <StateNumber>766</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="514" parent="509" name="details">
+    <column id="521" parent="511" name="details">
       <DasType>text|0s</DasType>
       <Position>2</Position>
       <StateNumber>766</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="515" parent="510" name="name">
+    <column id="522" parent="512" name="name">
       <DasType>varchar(30)|0s</DasType>
       <Position>1</Position>
       <StateNumber>760</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="516" parent="510" name="photo">
+    <column id="523" parent="512" name="photo">
       <DasType>bytea|0s</DasType>
       <Position>2</Position>
       <StateNumber>760</StateNumber>
       <TypeId>17</TypeId>
     </column>
-    <column id="517" parent="511" name="id">
+    <column id="524" parent="513" name="id">
       <DasType>integer|0s</DasType>
       <Position>1</Position>
       <StateNumber>742</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="518" parent="511" name="name">
+    <column id="525" parent="513" name="name">
       <DasType>varchar(50)|0s</DasType>
       <Position>2</Position>
       <StateNumber>742</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="519" parent="511" name="age">
+    <column id="526" parent="513" name="age">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
       <StateNumber>742</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="520" parent="512" name="id">
+    <column id="527" parent="514" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;users_info_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -7686,25 +7743,25 @@ false Zulu
       <SequenceId>16402</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="521" parent="512" name="name">
+    <column id="528" parent="514" name="name">
       <DasType>varchar(30)|0s</DasType>
       <Position>2</Position>
       <StateNumber>749</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="522" parent="512" name="dob">
+    <column id="529" parent="514" name="dob">
       <DasType>date|0s</DasType>
       <Position>3</Position>
       <StateNumber>749</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="523" parent="512" name="join_date">
+    <column id="530" parent="514" name="join_date">
       <DasType>timestamp|0s</DasType>
       <Position>4</Position>
       <StateNumber>755</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="524" parent="512" name="users_info_pkey">
+    <index id="531" parent="514" name="users_info_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16407</ObjectId>
@@ -7713,7 +7770,7 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="525" parent="512" name="users_info_pkey">
+    <key id="532" parent="514" name="users_info_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16408</ObjectId>
       <Primary>1</Primary>

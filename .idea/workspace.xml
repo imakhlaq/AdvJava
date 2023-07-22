@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78cbc1ae-4a22-4947-9adb-c233f6cc1220" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/JDBCApp/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/JDBCApp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Servlet/src/main/java/test/DemoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBCApp/src/in/jdbc/transaction/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/JDBCApp/src/in/jdbc/transaction/Transaction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,9 @@
   <component name="JsBowerSettings">
     <bower-package value="" />
     <bower.json value="" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2SkcqnJE9IDonGSgZfVH7bYJlDk" />
   <component name="ProjectViewState">
@@ -61,6 +65,10 @@
       <workItem from="1689754464897" duration="75000" />
       <workItem from="1689755511845" duration="93000" />
       <workItem from="1689755848029" duration="233000" />
+      <workItem from="1689941241182" duration="48000" />
+      <workItem from="1689955841303" duration="395000" />
+      <workItem from="1689956248915" duration="322000" />
+      <workItem from="1690012268697" duration="68000" />
     </task>
     <servers />
   </component>
