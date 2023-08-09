@@ -1,6 +1,5 @@
 package in.student.dto;
 
-
 public class StudentDTO {
     private String name;
 
@@ -11,7 +10,6 @@ public class StudentDTO {
     public void setName(String name) {
         this.name = name;
     }
-
 
     private Integer age;
 
@@ -32,7 +30,6 @@ public class StudentDTO {
     public void setEmail(String email) {
         this.email = email;
     }
-
 
     private String country;
 
