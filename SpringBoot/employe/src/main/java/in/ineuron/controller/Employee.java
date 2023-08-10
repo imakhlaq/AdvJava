@@ -24,9 +24,7 @@ public class Employee implements IEmployee {
 
     private String getInput() {
         Scanner scanner = new Scanner(System.in);
-        String req = scanner.next();
-        scanner.close();
-        return req;
+        return scanner.next();
     }
 
     public void choose() {
@@ -34,6 +32,7 @@ public class Employee implements IEmployee {
         System.out.println("2 To get Employee data");
         System.out.println("3 To Update Employee data");
         System.out.println("4 To delete Employee");
+        System.out.println();
         String req = getInput();
 
         if ("1".equals(req)) addNewEmpolyee();
@@ -56,8 +55,8 @@ public class Employee implements IEmployee {
         System.out.println("Enter employee Email");
         emp.setEmail(getInput());
 
-        EmployeeData data = employeeService.addNewEmpolyee(emp);
-        System.out.println(data);
+        employeeService.addNewEmpolyee(emp);
+
     }
 
     @Override
@@ -67,11 +66,16 @@ public class Employee implements IEmployee {
 
     @Override
     public void deleteEmpolyee() {
+        Integer id = Integer.parseInt(getInput());
+        employeeService.deleteEmpolyee(id);
 
     }
 
     @Override
     public void getEmpolyee() {
-
+        System.out.println("Enter employee id");
+        Integer id = Integer.parseInt(getInput());
+        EmployeeData emp = employeeService.getEmpolyee(id);
+        System.out.println(emp);
     }
 }

@@ -5,11 +5,11 @@ import in.ineuron.service.EmployeeData;
 
 public interface IEmpolyeeDAO {
 
-    EmployeeData addNewEmpolyee(EmployeeDTO data);
+    EmployeeDTO addNewEmpolyee(EmployeeDTO data);
 
     EmployeeData updateEmpolyee(EmployeeDTO id);
 
-    EmployeeData deleteEmpolyee(Integer id);
+    void deleteEmpolyee(Integer id);
 
     EmployeeData getEmpolyee(Integer id);
 

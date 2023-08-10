@@ -1,7 +1,7 @@
 package in.ineuron.service;
 
 import in.ineuron.controller.EmployeeDTO;
-import in.ineuron.dao.EmployeDAO;
+import in.ineuron.dao.EmployeeDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,10 +12,10 @@ import java.util.Scanner;
 @Service
 public class EmployeeService implements IEmployeeService {
 
-    private final EmployeDAO dao;
+    private final EmployeeDAO dao;
 
     @Autowired
-    EmployeeService(EmployeDAO dao) {
+    EmployeeService(EmployeeDAO dao) {
         this.dao = dao;
     }
 
@@ -27,7 +27,7 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public EmployeeData addNewEmpolyee(EmployeeDTO data) {
+    public EmployeeDTO addNewEmpolyee(EmployeeDTO data) {
         return dao.addNewEmpolyee(data);
     }
 
@@ -68,8 +68,8 @@ public class EmployeeService implements IEmployeeService {
     }
 
     @Override
-    public EmployeeData deleteEmpolyee(Integer id) {
-        return dao.deleteEmpolyee(id);
+    public void deleteEmpolyee(Integer id) {
+        dao.deleteEmpolyee(id);
     }
 
     @Override
