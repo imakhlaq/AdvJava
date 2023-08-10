@@ -25,7 +25,7 @@ public class WisMessage {
 
 
     public void printDate() {
-        System.out.println(time.getMonth());
+        System.out.println(time);
     }
 
 }
