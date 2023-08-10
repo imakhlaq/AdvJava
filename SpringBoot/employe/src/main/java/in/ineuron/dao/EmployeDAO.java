@@ -13,7 +13,7 @@ public class EmployeDAO implements IEmpolyeeDAO {
     }
 
     @Override
-    public EmployeeData updateEmpolyee(Integer id) {
+    public EmployeeData updateEmpolyee(EmployeeDTO id) {
         return null;
     }
 

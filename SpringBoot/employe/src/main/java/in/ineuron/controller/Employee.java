@@ -1,6 +1,7 @@
 package in.ineuron.controller;
 
 
+import in.ineuron.service.EmployeeData;
 import in.ineuron.service.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -55,8 +56,8 @@ public class Employee implements IEmployee {
         System.out.println("Enter employee Email");
         emp.setEmail(getInput());
 
-        employeeService.addNewEmpolyee(emp);
-
+        EmployeeData data = employeeService.addNewEmpolyee(emp);
+        System.out.println(data);
     }
 
     @Override

@@ -7,7 +7,7 @@ public interface IEmpolyeeDAO {
 
     EmployeeData addNewEmpolyee(EmployeeDTO data);
 
-    EmployeeData updateEmpolyee(Integer id);
+    EmployeeData updateEmpolyee(EmployeeDTO id);
 
     EmployeeData deleteEmpolyee(Integer id);
 
