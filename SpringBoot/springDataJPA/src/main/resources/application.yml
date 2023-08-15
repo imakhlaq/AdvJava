@@ -1,0 +1,14 @@
+#DataSource configuration(hikaricp)
+spring:
+  datasource:
+    url: jdbc:postgresql:///java
+    username: postgres
+    password: sBCA
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+#setting hibernate options(dialect will be automatically picked)
