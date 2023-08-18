@@ -38,8 +38,11 @@ public class SpringDataJpaApplication {
         studentList.add(student12);
 
         //passing list
-        studentService.registerInBatch(studentList);
+        Iterable<Student> sts =
+                studentService.registerInBatch(studentList);
 
+        sts.forEach(System.out::println);
+      
 
         ((ConfigurableApplicationContext) context).close();
     }
