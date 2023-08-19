@@ -2,15 +2,14 @@ package in.inuron;
 
 import in.inuron.model.Student;
 import in.inuron.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
+import java.util.stream.Stream;
 
 @SpringBootApplication
 public class BlobClobAndLombokApplication {
@@ -29,20 +28,27 @@ public class BlobClobAndLombokApplication {
         student.setDOB(LocalDate.of(1999, 10, 3));
 
         //reading Photo as binary
+        File photoFile = new File("F:\\boat.png");
 
-        File photoFile = new File("F:\boat.png");
-        File charFile = new File("F:\tero.txt");
-        try (FileInputStream fis = new FileInputStream(photoFile);) {
+        //reading character file
+        File charFile = new File("F:\\tero.txt");
+        try (FileInputStream fis = new FileInputStream(photoFile); BufferedReader bis = new BufferedReader(new FileReader(charFile))) {
 
             byte[] bytes = fis.readAllBytes();
+            student.setPhoto(bytes);
 
+            char[] chars = new char[(int) charFile.length()];
+            bis.read(chars);
+
+            student.setBioData(chars);
+
+            service.addNewStudent(student);
 
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
 
-        //reading character file
     }
 
 }

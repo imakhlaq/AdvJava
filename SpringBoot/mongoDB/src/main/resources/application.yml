@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://imakhlaqxd:sBCA@cluster0.i1p1gtv.mongodb.net/java?retryWrites=true&w=majority

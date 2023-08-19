@@ -32,10 +32,10 @@ public class Student {
     private LocalDate DOB;
 
     @Lob
-    private Byte[] photo;
+    private byte[] photo;
 
     @Lob
-    private Character[] bioData;
+    private char[] bioData;
 
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
