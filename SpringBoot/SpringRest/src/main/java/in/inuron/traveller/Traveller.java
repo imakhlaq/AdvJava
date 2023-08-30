@@ -15,6 +15,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Traveller {
     @Id
     String id;
+    
     String name;
 
 
